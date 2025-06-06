@@ -1,0 +1,908 @@
+[
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-05-20T08:28:43.725396585Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCYC3V8XV1J2DFZSF29SVE"
+      ],
+      "received_at": "2025-05-20T08:28:43.720760677Z",
+      "uplink_message": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "f_port": 2,
+        "f_cnt": 5,
+        "frm_payload": "aGVsbG93b3JsZA==",
+        "decoded_payload": {
+          "Battery": 28535,
+          "Humidity": 27748,
+          "Temperature": 28530,
+          "Timestamp": "2025-07-02T17:29:16.000Z",
+          "Velocity": 0
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "prj-6sens-gtw1",
+              "eui": "B827EBFEFFA3F6AC"
+            },
+            "time": "2025-05-20T08:28:43.414927005Z",
+            "timestamp": 3321726332,
+            "rssi": -11,
+            "channel_rssi": -11,
+            "snr": 9,
+            "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asEPyK9q8MGgwIu/qwwQYQwaDL9QEg4NjFstahFQ==",
+            "received_at": "2025-05-20T08:28:43.489177267Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-fcc23dfffe0f42ce",
+              "eui": "FCC23DFFFE0F42CE"
+            },
+            "time": "2021-07-17T11:50:29.673329Z",
+            "timestamp": 1180653740,
+            "rssi": -82,
+            "channel_rssi": -82,
+            "snr": 9,
+            "location": {
+              "latitude": 45.78366671,
+              "longitude": 4.8727062,
+              "altitude": 13,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOEKyx/bIEGgwIu/qwwQYQyLHg/gEg4L/Jo661xwI=",
+            "received_at": "2025-05-20T08:28:43.534255816Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-7276ff002e090355",
+              "eui": "7276FF002E090355"
+            },
+            "time": "2025-05-20T08:28:43.470Z",
+            "timestamp": 2571133980,
+            "encrypted_fine_timestamp": "iIqKdu+OVXLH8dtQO/VRsg==",
+            "encrypted_fine_timestamp_key_id": "0",
+            "rssi": -110,
+            "signal_rssi": -114,
+            "channel_rssi": -110,
+            "snr": -1,
+            "frequency_offset": "-4240",
+            "location": {
+              "latitude": 45.7862056,
+              "longitude": 4.87972983,
+              "altitude": 20,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVEJzIgcoJGgwIu/qwwQYQjvuCvQIg4JqcnOrhnwEqDAi7+rDBBhCAw47gAQ==",
+            "channel_index": 5,
+            "gps_time": "2025-05-20T08:28:43.470Z",
+            "received_at": "2025-05-20T08:28:41.441147540Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 12,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "868100000",
+          "timestamp": 3321726332,
+          "time": "2025-05-20T08:28:43.414927005Z"
+        },
+        "received_at": "2025-05-20T08:28:43.516276773Z",
+        "confirmed": true,
+        "consumed_airtime": "1.482752s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCYC3V8XV1J2DFZSF29SVE"
+    ],
+    "origin": "ip-10-100-13-51.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCYCAD1YH8FEZP4CJ84MKW"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-05-20T08:28:16.085617026Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCXH3ZZ5N3JSKN9MDWW9MG"
+      ],
+      "received_at": "2025-05-20T08:28:16.081285195Z",
+      "uplink_message": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "f_port": 2,
+        "f_cnt": 4,
+        "frm_payload": "aGVsbG93b3JsZA==",
+        "decoded_payload": {
+          "Battery": 28535,
+          "Humidity": 27748,
+          "Temperature": 28530,
+          "Timestamp": "2025-07-02T17:29:16.000Z",
+          "Velocity": 0
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "prj-6sens-gtw1",
+              "eui": "B827EBFEFFA3F6AC"
+            },
+            "time": "2025-05-20T08:28:15.769455909Z",
+            "timestamp": 3294082390,
+            "rssi": -11,
+            "channel_rssi": -11,
+            "snr": 7,
+            "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asENbq3qIMGgwIn/qwwQYQusujnwMg8K/xtO+gFQ==",
+            "received_at": "2025-05-20T08:28:15.845043244Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-fcc23dfffe0f42ce",
+              "eui": "FCC23DFFFE0F42CE"
+            },
+            "time": "2021-07-17T11:50:02.024516Z",
+            "timestamp": 1153009788,
+            "rssi": -83,
+            "channel_rssi": -83,
+            "snr": 8,
+            "location": {
+              "latitude": 45.78366671,
+              "longitude": 4.8727062,
+              "altitude": 13,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOEPyQ5qUEGgwIn/qwwQYQhvmppgMg4Mj0pce0xwI=",
+            "channel_index": 2,
+            "received_at": "2025-05-20T08:28:15.885685382Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-7276ff002e090355",
+              "eui": "7276FF002E090355"
+            },
+            "time": "2025-05-20T08:28:15.826Z",
+            "timestamp": 2543490036,
+            "encrypted_fine_timestamp": "jju0YsEeWrEmGM5CarezIQ==",
+            "encrypted_fine_timestamp_key_id": "0",
+            "rssi": -109,
+            "signal_rssi": -112,
+            "channel_rssi": -109,
+            "frequency_offset": "-4212",
+            "location": {
+              "latitude": 45.7862056,
+              "longitude": 4.87972983,
+              "altitude": 20,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVEPSn6rwJGgwIn/qwwQYQkKTczQMgoOLHnoPhnwEqDAif+rDBBhCAhe+JAw==",
+            "channel_index": 7,
+            "gps_time": "2025-05-20T08:28:15.826Z",
+            "received_at": "2025-05-20T08:28:13.739498338Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 12,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "868500000",
+          "timestamp": 3294082390,
+          "time": "2025-05-20T08:28:15.769455909Z"
+        },
+        "received_at": "2025-05-20T08:28:15.871923209Z",
+        "confirmed": true,
+        "consumed_airtime": "1.482752s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCXH3ZZ5N3JSKN9MDWW9MG"
+    ],
+    "origin": "ip-10-100-14-127.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCXHANKHNV2Z5720QCP7N9"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-05-20T08:27:48.442281568Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCWP46YS9Y3JC7HSEMP44C"
+      ],
+      "received_at": "2025-05-20T08:27:48.437813609Z",
+      "uplink_message": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "f_port": 2,
+        "f_cnt": 3,
+        "frm_payload": "aGVsbG93b3JsZA==",
+        "decoded_payload": {
+          "Battery": 28535,
+          "Humidity": 27748,
+          "Temperature": 28530,
+          "Timestamp": "2025-07-02T17:29:16.000Z",
+          "Velocity": 0
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "prj-6sens-gtw1",
+              "eui": "B827EBFEFFA3F6AC"
+            },
+            "time": "2025-05-20T08:27:48.131042957Z",
+            "timestamp": 3266438430,
+            "rssi": -13,
+            "channel_rssi": -13,
+            "snr": 9.25,
+            "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asEJ7Kx5UMGgsIhPqwwQYQ+tCDbiCw+pu3iKAV",
+            "received_at": "2025-05-20T08:27:48.205089507Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-fcc23dfffe0f42ce",
+              "eui": "FCC23DFFFE0F42CE"
+            },
+            "time": "2021-07-17T11:49:34.385675Z",
+            "timestamp": 1125365820,
+            "rssi": -87,
+            "channel_rssi": -87,
+            "snr": 8.8,
+            "location": {
+              "latitude": 45.78366671,
+              "longitude": 4.8727062,
+              "altitude": 13,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOELzwzpgEGgsIhPqwwQYQuOLMdSDg1J6o4LPHAg==",
+            "channel_index": 3,
+            "received_at": "2025-05-20T08:27:48.246624568Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-7276ff002e090355",
+              "eui": "7276FF002E090355"
+            },
+            "time": "2025-05-20T08:27:48.183Z",
+            "timestamp": 2515846076,
+            "encrypted_fine_timestamp": "+k1aDzZYEPuDd4PwFCwc4Q==",
+            "encrypted_fine_timestamp_key_id": "0",
+            "rssi": -114,
+            "signal_rssi": -117,
+            "channel_rssi": -114,
+            "frequency_offset": "-4233",
+            "location": {
+              "latitude": 45.7862056,
+              "longitude": 4.87972983,
+              "altitude": 20,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVELyH068JGgwIhPqwwQYQ5ovupQEg4KzyoJzgnwEqCwiE+rDBBhDAt6FX",
+            "gps_time": "2025-05-20T08:27:48.183Z",
+            "received_at": "2025-05-20T08:27:46.119033144Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 12,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "867100000",
+          "timestamp": 3266438430,
+          "time": "2025-05-20T08:27:48.131042957Z"
+        },
+        "received_at": "2025-05-20T08:27:48.231567138Z",
+        "confirmed": true,
+        "consumed_airtime": "1.482752s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCWP46YS9Y3JC7HSEMP44C"
+    ],
+    "origin": "ip-10-100-14-127.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCWPATJBG60A4Z83YRAVFD"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-05-20T08:27:20.800194284Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCVV4C30WGQPH2WFVMZRF9"
+      ],
+      "received_at": "2025-05-20T08:27:20.795565672Z",
+      "uplink_message": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "f_port": 2,
+        "f_cnt": 2,
+        "frm_payload": "aGVsbG93b3JsZA==",
+        "decoded_payload": {
+          "Battery": 28535,
+          "Humidity": 27748,
+          "Temperature": 28530,
+          "Timestamp": "2025-07-02T17:29:16.000Z",
+          "Velocity": 0
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "prj-6sens-gtw1",
+              "eui": "B827EBFEFFA3F6AC"
+            },
+            "time": "2025-05-20T08:27:20.488018989Z",
+            "timestamp": 3238794487,
+            "rssi": -12,
+            "channel_rssi": -12,
+            "snr": 9,
+            "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asEPepsIgMGgwI6PmwwQYQl/7QmAIg2MnHuaGfFQ==",
+            "received_at": "2025-05-20T08:27:20.562446780Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-fcc23dfffe0f42ce",
+              "eui": "FCC23DFFFE0F42CE"
+            },
+            "time": "2021-07-17T11:49:06.726891Z",
+            "timestamp": 1097721868,
+            "rssi": -88,
+            "channel_rssi": -88,
+            "snr": 7.2,
+            "location": {
+              "latitude": 45.78366671,
+              "longitude": 4.8727062,
+              "altitude": 13,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOEIzQt4sEGgwI6PmwwQYQsoaqmAIg4N3JqvmyxwI=",
+            "channel_index": 6,
+            "received_at": "2025-05-20T08:27:20.587891506Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-7276ff002e090355",
+              "eui": "7276FF002E090355"
+            },
+            "time": "2025-05-20T08:27:20.539Z",
+            "timestamp": 2488202116,
+            "encrypted_fine_timestamp": "YCXPC0S0HRbEfJnD0Sj8qw==",
+            "encrypted_fine_timestamp_key_id": "0",
+            "rssi": -113,
+            "signal_rssi": -115,
+            "channel_rssi": -113,
+            "snr": 2,
+            "frequency_offset": "-4261",
+            "location": {
+              "latitude": 45.7862056,
+              "longitude": 4.87972983,
+              "altitude": 20,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVEITnu6IJGgwI6PmwwQYQw+Lz3AIgoPeco7XfnwEqDAjo+bDBBhDA+YGBAg==",
+            "channel_index": 3,
+            "gps_time": "2025-05-20T08:27:20.539Z",
+            "received_at": "2025-05-20T08:27:18.503596095Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 12,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "867700000",
+          "timestamp": 3238794487,
+          "time": "2025-05-20T08:27:20.488018989Z"
+        },
+        "received_at": "2025-05-20T08:27:20.589269937Z",
+        "confirmed": true,
+        "consumed_airtime": "1.482752s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCVV4C30WGQPH2WFVMZRF9"
+    ],
+    "origin": "ip-10-100-13-51.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCVVB024P761QGF8VTEXZA"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-05-20T08:26:53.280677782Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCV08AK1QQG996MHY84WSV"
+      ],
+      "received_at": "2025-05-20T08:26:53.274638566Z",
+      "uplink_message": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "f_port": 2,
+        "f_cnt": 1,
+        "frm_payload": "aGVsbG93b3JsZA==",
+        "decoded_payload": {
+          "Battery": 28535,
+          "Humidity": 27748,
+          "Temperature": 28530,
+          "Timestamp": "2025-07-02T17:29:16.000Z",
+          "Velocity": 0
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "prj-6sens-gtw1",
+              "eui": "B827EBFEFFA3F6AC"
+            },
+            "time": "2025-05-20T08:26:52.965795040Z",
+            "timestamp": 3211278865,
+            "rssi": -12,
+            "channel_rssi": -12,
+            "snr": 8.75,
+            "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asEJH0oPsLGgsIzfmwwQYQnaW0HyDopIv5up4V",
+            "received_at": "2025-05-20T08:26:53.039785794Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-fcc23dfffe0f42ce",
+              "eui": "FCC23DFFFE0F42CE"
+            },
+            "time": "2021-07-17T11:48:39.228202Z",
+            "timestamp": 1070206236,
+            "rssi": -83,
+            "channel_rssi": -83,
+            "snr": 8.2,
+            "location": {
+              "latitude": 45.78366671,
+              "longitude": 4.8727062,
+              "altitude": 13,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOEJyaqP4DGgsIzfmwwQYQ74HHKiDg6ozqkrLHAg==",
+            "channel_index": 7,
+            "received_at": "2025-05-20T08:26:53.089243887Z"
+          },
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-7276ff002e090355",
+              "eui": "7276FF002E090355"
+            },
+            "time": "2025-05-20T08:26:53.023Z",
+            "timestamp": 2460686492,
+            "encrypted_fine_timestamp": "ZQjWSWp+1gQjKURykKbacA==",
+            "encrypted_fine_timestamp_key_id": "0",
+            "rssi": -117,
+            "signal_rssi": -122,
+            "channel_rssi": -117,
+            "snr": -3,
+            "frequency_offset": "-4178",
+            "location": {
+              "latitude": 45.7862056,
+              "longitude": 4.87972983,
+              "altitude": 20,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVEJyxrJUJGgsIzfmwwQYQ1tmkTyDgwuDizt6fASoLCM35sMEGEMDn+wo=",
+            "channel_index": 4,
+            "gps_time": "2025-05-20T08:26:53.023Z",
+            "received_at": "2025-05-20T08:26:50.938166738Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 12,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "867900000",
+          "timestamp": 3211278865,
+          "time": "2025-05-20T08:26:52.965795040Z"
+        },
+        "received_at": "2025-05-20T08:26:53.066582826Z",
+        "confirmed": true,
+        "consumed_airtime": "1.482752s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000181",
+          "tenant_id": "ttn",
+          "cluster_id": "eu1",
+          "cluster_address": "eu1.cloud.thethings.network"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCV08AK1QQG996MHY84WSV"
+    ],
+    "origin": "ip-10-100-14-127.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCV0F06B4EWF4KDYZM96JJ"
+  },
+  {
+    "name": "as.up.join.forward",
+    "time": "2025-05-20T08:26:46.538424371Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "node-1-otaa",
+        "application_ids": {
+          "application_id": "sastress-stm32-app"
+        },
+        "dev_eui": "70B3D57ED00621A5",
+        "join_eui": "0000000000000000",
+        "dev_addr": "260B8C94"
+      },
+      "correlation_ids": [
+        "gs:uplink:01JVPCTR3KQP9XDZ43Q8572HVY"
+      ],
+      "received_at": "2025-05-20T08:26:46.533279125Z",
+      "join_accept": {
+        "session_key_id": "AZbszWB6nUKDbXVrqa1WTw==",
+        "received_at": "2025-05-20T08:26:44.724369897Z"
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCTR3KQP9XDZ43Q8572HVY"
+    ],
+    "origin": "ip-10-100-13-51.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCTSWABE99HPVEKHJAVCYR"
+  },
+  {
+    "name": "ns.up.join.process",
+    "time": "2025-05-20T08:26:44.929339973Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260BF5A2"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "AAAAAAAAAAAApSEG0H7Vs3ABALJ8h0k=",
+      "payload": {
+        "m_hdr": {},
+        "mic": "snyHSQ==",
+        "join_request_payload": {
+          "join_eui": "0000000000000000",
+          "dev_eui": "70B3D57ED00621A5",
+          "dev_nonce": "0001"
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 12,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "868300000",
+        "timestamp": 3202940772,
+        "time": "2025-05-20T08:26:44.627984046Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "prj-6sens-gtw1",
+            "eui": "B827EBFEFFA3F6AC"
+          },
+          "time": "2025-05-20T08:26:44.627984046Z",
+          "timestamp": 3202940772,
+          "rssi": -10,
+          "channel_rssi": -10,
+          "snr": 9.25,
+          "uplink_token": "ChwKGgoOcHJqLTZzZW5zLWd0dzESCLgn6/7/o/asEOT+o/cLGgwIxPmwwQYQ3ab52AIgoL2W8ZueFQ==",
+          "received_at": "2025-05-20T08:26:44.697325058Z"
+        },
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-fcc23dfffe0f42ce",
+            "eui": "FCC23DFFFE0F42CE"
+          },
+          "time": "2021-07-17T11:48:30.879502Z",
+          "timestamp": 1061868148,
+          "rssi": -82,
+          "channel_rssi": -82,
+          "snr": 10,
+          "location": {
+            "latitude": 45.78366671,
+            "longitude": 4.8727062,
+            "altitude": 13,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiIKIAoUZXVpLWZjYzIzZGZmZmUwZjQyY2USCPzCPf/+D0LOEPSkq/oDGgwIxPmwwQYQvv2M4QIgoKqY4vOxxwI=",
+          "channel_index": 1,
+          "received_at": "2025-05-20T08:26:44.740507326Z"
+        },
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-7276ff002e090355",
+            "eui": "7276FF002E090355"
+          },
+          "time": "2025-05-20T08:26:44.685Z",
+          "timestamp": 2452348396,
+          "encrypted_fine_timestamp": "tUJWSDMMQI9Jd6NW9f98nA==",
+          "encrypted_fine_timestamp_key_id": "0",
+          "rssi": -110,
+          "signal_rssi": -115,
+          "channel_rssi": -110,
+          "snr": -3,
+          "frequency_offset": "-4273",
+          "location": {
+            "latitude": 45.7862056,
+            "longitude": 4.87972983,
+            "altitude": 20,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiIKIAoUZXVpLTcyNzZmZjAwMmUwOTAzNTUSCHJ2/wAuCQNVEOy7r5EJGgwIxPmwwQYQu+nwngMg4MPr2q/enwEqDAjE+bDBBhDAitHGAg==",
+          "channel_index": 6,
+          "gps_time": "2025-05-20T08:26:44.685Z",
+          "received_at": "2025-05-20T08:26:42.641959863Z"
+        }
+      ],
+      "received_at": "2025-05-20T08:26:44.724369897Z",
+      "correlation_ids": [
+        "gs:uplink:01JVPCTR3KQP9XDZ43Q8572HVY"
+      ],
+      "device_channel_index": 1,
+      "consumed_airtime": "1.482752s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01JVPCTR3KQP9XDZ43Q8572HVY"
+    ],
+    "origin": "ip-10-100-7-159.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCTRA1ZMNBHTQZE5NS6YZ7"
+  },
+  {
+    "name": "js.join.accept",
+    "time": "2025-05-20T08:26:44.737941268Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "node-1-otaa",
+          "application_ids": {
+            "application_id": "sastress-stm32-app"
+          },
+          "dev_eui": "70B3D57ED00621A5",
+          "join_eui": "0000000000000000",
+          "dev_addr": "260B8C94"
+        }
+      }
+    ],
+    "origin": "ip-10-100-15-108.eu-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgN0dG4="
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01JVPCTR4159A32BZH2JEPKM1B"
+  },
+  {
+    "time": "2025-05-20T08:26:38.976Z",
+    "name": "synthetic.status.cleared",
+    "isError": false,
+    "isSynthetic": true,
+    "unique_id": "synthetic.1747729598976"
+  }
+]
