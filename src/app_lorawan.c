@@ -33,6 +33,7 @@ static void lorwan_datarate_changed(enum lorawan_datarate dr)
 	printk("new datarate: DR_%d, max payload: %d\n", dr, max_size);
 }
 
+//  ========== app_lorawan_init =========================================================== 
 int8_t app_lorawan_init(void)
 {
 	struct lorawan_join_config join_cfg;
@@ -80,7 +81,7 @@ int8_t app_lorawan_init(void)
 	gpio_pin_set_dt(&led_tx, 1);
 
 	// enable Adaptive Data Rate (ADR) to optimize communication settings
-//    lorawan_enable_adr(true);
+    lorawan_enable_adr(true);
 
     // register downlink and data rate change callbacks for receiving messages and updates
 	struct lorawan_downlink_cb downlink_cb = {
@@ -98,7 +99,7 @@ int8_t app_lorawan_init(void)
 	join_cfg.otaa.nwk_key = app_key;
 	join_cfg.otaa.dev_nonce = 0u;
 
-	printk("Joining network over OTAA");
+	printk("joining network over OTAA");
 	ret = lorawan_join(&join_cfg);
 	if (ret < 0) {
 		printk("lorawan_join_network failed: %d", ret);
@@ -106,44 +107,43 @@ int8_t app_lorawan_init(void)
 	}
 
 	// attempt to join the LoRaWAN network using OTAA
-	// do {
-	// 	printk("attempting to join LoRaWAN network using OTAA. Dev nonce: %d, attempt: %d\n", join_cfg.otaa.dev_nonce, itr++);
+	do {
+		printk("attempting to join LoRaWAN network using OTAA. Dev nonce: %d, attempt: %d\n", join_cfg.otaa.dev_nonce, itr++);
 
-	// 	// indicate receiving activity by toggling the reception LED
-	// 	gpio_pin_set_dt(&led_rx, 1);
+		// indicate receiving activity by toggling the reception LED
+		gpio_pin_set_dt(&led_rx, 1);
 
-	// 	ret = lorawan_join(&join_cfg);
-	// 	if (ret < 0) {
-	// 		if (ret == -ETIMEDOUT) {
-	// 			printk("join request timed out. retrying...\n");
-	// 		} else {
-	// 			printk("failed to join network. error: %d\n", ret);
-	// 		}
-	// 	} else {
-	// 		printk("successfully joined LoRaWAN network using OTAA.\n");
-	// 	}
+		ret = lorawan_join(&join_cfg);
+		if (ret < 0) {
+			if (ret == -ETIMEDOUT) {
+				printk("join request timed out. retrying...\n");
+			} else {
+				printk("failed to join network. error: %d\n", ret);
+			}
+		} else {
+			printk("successfully joined LoRaWAN network using OTAA.\n");
+		}
 
-	// 	// increment and save the device nonce in NVS for the next attempt
-	// 	dev_nonce++;
-	// 	join_cfg.otaa.dev_nonce = dev_nonce;
+		// increment and save the device nonce in NVS for the next attempt
+		dev_nonce++;
+		join_cfg.otaa.dev_nonce = dev_nonce;
 
-	// 	// save value away in Non-Volatile Storage.
-	// 	ssize_t err = nvs_write(&fs, NVS_DEVNONCE_ID, &dev_nonce, sizeof(dev_nonce));
-	// 	if (err < 0) {
-	// 		printk("NVS: failed to write dev_nonce (id %d). error: %d\n", NVS_DEVNONCE_ID, err);
-	// 	}
+		// save value away in Non-Volatile Storage.
+		ssize_t err = nvs_write(&fs, NVS_DEVNONCE_ID, &dev_nonce, sizeof(dev_nonce));
+		if (err < 0) {
+			printk("NVS: failed to write dev_nonce (id %d). error: %d\n", NVS_DEVNONCE_ID, err);
+		}
 
-	// 	// if the join attempt failed, wait before retrying
-	// 	if (ret < 0) {
-	// 		// if failed, wait before re-trying.
-	// 		k_sleep(K_MSEC(10000));
-	// 	}
-	// } while (ret != 0 && itr < MAX_JOIN_ATTEMPTS);
+		// if the join attempt failed, wait before retrying
+		if (ret < 0) {
+			// if failed, wait before re-trying.
+			k_sleep(K_MSEC(10000));
+		}
+	} while (ret != 0 && itr < MAX_JOIN_ATTEMPTS);
 
 	// turn off LEDs to indicate the end of the process
 	gpio_pin_set_dt(&led_tx, 0);
 	gpio_pin_set_dt(&led_rx, 0);
-	
     return 1;
 }
 

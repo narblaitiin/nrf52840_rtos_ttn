@@ -56,12 +56,6 @@ int8_t main(void)
 	uint8_t dev_eui[] = LORAWAN_DEV_EUI;
 	uint8_t join_eui[] = LORAWAN_JOIN_EUI;
 	uint8_t app_key[] = LORAWAN_APP_KEY;
-	int ret;
-
-	struct lorawan_downlink_cb downlink_cb = {
-		.port = LW_RECV_PORT_ANY,
-		.cb = dl_callback
-	};
 
 	lora_dev = DEVICE_DT_GET(DT_ALIAS(lora0));
 	if (!device_is_ready(lora_dev)) {
@@ -69,29 +63,57 @@ int8_t main(void)
 		return 0;
 	}
 
-	ret = lorawan_start();
+	// start the LoRaWAN stack
+	int8_t ret = lorawan_start();
 	if (ret < 0) {
-		printk("lorawan_start failed: %d", ret);
+		printk("failed to start LoRaWAN stack. error: %d\n", ret);
+		return 0;
+	} else {
+		
+			// allow some time for the stack to stabilize
+			k_sleep(K_MSEC(500));
+	}
+
+	printk("starting LoRaWAN stack\n");
+
+    // set the region (Europe)
+	ret = lorawan_set_region(LORAWAN_REGION_EU868);
+	if (ret < 0) {
+		printk("failed to start LoRaWAN stack. error: %d\n", ret);
 		return 0;
 	}
 
-	lorawan_register_downlink_callback(&downlink_cb);
-	lorawan_register_dr_changed_callback(lorwan_datarate_changed);
+	// indicate device activity by toggling the reception LED
+	gpio_pin_set_dt(&led_rx, 1);
 
-	join_cfg.mode = LORAWAN_ACT_OTAA;
+	// enable Adaptive Data Rate (ADR) to optimize communication settings
+    lorawan_enable_adr(true);
+
+    // register downlink and data rate change callbacks for receiving messages and updates
+	struct lorawan_downlink_cb downlink_cb = {
+		.port = LW_RECV_PORT_ANY,
+		.cb = dl_callback
+	};
+	lorawan_register_downlink_callback(&downlink_cb);
+	lorawan_register_dr_changed_callback(lorwan_datarate_changed);  
+
+	// configuration of lorawan network using OTAA
+    join_cfg.mode = LORAWAN_ACT_OTAA;
 	join_cfg.dev_eui = dev_eui;
 	join_cfg.otaa.join_eui = join_eui;
 	join_cfg.otaa.app_key = app_key;
 	join_cfg.otaa.nwk_key = app_key;
 	join_cfg.otaa.dev_nonce = 0u;
 
-	printk("Joining network over OTAA");
+	printk("joining network over OTAA");
 	ret = lorawan_join(&join_cfg);
 	if (ret < 0) {
 		printk("lorawan_join_network failed: %d", ret);
 		return 0;
 	}
 
+	// turn off LEDs to indicate the end of the process
+	gpio_pin_set_dt(&led_rx, 0);
 	printk("Test of LoRaWAN and TTN\n");
 
 	// start the main loop for data simulation and transmission
@@ -122,6 +144,7 @@ int8_t main(void)
 		}
 
 		printk("data sent successfully!\n");
+		// turn off LEDs to indicate the end of the process
 		gpio_pin_set_dt(&led_tx, 0);
 
 		// wait before the next iteration
