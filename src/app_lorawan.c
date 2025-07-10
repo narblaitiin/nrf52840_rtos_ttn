@@ -7,7 +7,7 @@
 
 //  ========== includes ====================================================================
 #include "app_lorawan.h"
-#include "app_flash.h"
+#include "app_nvs.h"
 
 //  ========== globals =====================================================================
 static const struct gpio_dt_spec led_tx = GPIO_DT_SPEC_GET(LED_TX, gpios);
@@ -46,8 +46,8 @@ int8_t app_lorawan_init(void)
 	uint8_t app_key[]	= LORAWAN_APP_KEY;
 
 	// initialize non-volatile storage (NVS) and read the current dev_nonce value
-	app_flash_init(&fs);
-	app_flash_init_param(&fs, NVS_DEVNONCE_ID, &dev_nonce);
+	app_nvs_init(&fs);
+	app_nvs_init_param(&fs, NVS_DEVNONCE_ID, &dev_nonce);
 
 	printk("starting LoRaWAN node initialization\n");
 

@@ -6,10 +6,10 @@
  */
 
 //  ========== include =====================================================================
-#include "app_flash.h"
+#include "app_nvs.h"
 
 //  ========== app_flash_init ==============================================================
-int8_t app_flash_init(struct nvs_fs *fs)
+int8_t app_nvs_init(struct nvs_fs *fs)
 {
 	struct flash_pages_info info;
 	int8_t ret = 0;
@@ -57,7 +57,7 @@ int8_t app_flash_init(struct nvs_fs *fs)
 }
 
 //  ========== app_flash_init_param ========================================================
-int8_t app_flash_init_param(struct nvs_fs *fs, uint16_t id, void *data)
+int8_t app_nvs_init_param(struct nvs_fs *fs, uint16_t id, void *data)
 {
 	int8_t ret = 0;
 
