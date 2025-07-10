@@ -37,6 +37,7 @@ static void lorwan_datarate_changed(enum lorawan_datarate dr)
 int8_t main(void)
 {
 	char payload[] =  {'h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd'};
+	int8_t ret;
 
 	// configure LEDs for TX and RX indication
 	gpio_pin_configure_dt(&led_tx, GPIO_OUTPUT_ACTIVE);
@@ -45,7 +46,7 @@ int8_t main(void)
 	gpio_pin_set_dt(&led_rx, 0);		// turn off TX LED
 
 	// initialize LoRaWAN protocol and register the device
-	// int8_t ret = app_lorawan_init();
+	// ret = app_lorawan_init();
 	// if (ret != 1) {
 	// 	printk("failed to initialze LoRaWAN protocol\n");
 	// 	return 0;
@@ -64,7 +65,7 @@ int8_t main(void)
 	}
 
 	// start the LoRaWAN stack
-	int8_t ret = lorawan_start();
+	ret = lorawan_start();
 	if (ret < 0) {
 		printk("failed to start LoRaWAN stack. error: %d\n", ret);
 		return 0;

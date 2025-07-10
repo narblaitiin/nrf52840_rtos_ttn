@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef APP_FLASH_H
-#define APP_FLASH_H
+#ifndef APP_NVS_H
+#define APP_NVS_H
 
 //  ========== includes ====================================================================
 #include <zephyr/kernel.h>
@@ -23,7 +23,7 @@
 #define NVS_DEVNONCE_ID			0                     
 
 //  ========== prototypes ==================================================================
-int8_t app_flash_init(struct nvs_fs *fs);
-int8_t app_flash_init_param(struct nvs_fs *fs, uint16_t id, void *data);
+int8_t app_nvs_init(struct nvs_fs *fs);
+int8_t app_nvs_init_param(struct nvs_fs *fs, uint16_t id, void *data);
 
-#endif /* APP_FLASH_H */
+#endif /* APP_NVS_H */
