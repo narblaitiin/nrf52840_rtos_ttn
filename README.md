@@ -6,11 +6,8 @@ This code also allows to test a physical link from the node to the gateway then 
 
 The packets sent have the following characteristics:
 
-    - Timer : packets every 30 secondes
-    - Random value with the range from min = 0 to max = 100% like values from ADC (sensor/battery to percent of charge/discharge)
-    - Random value with the range fron 0 to 100% for humidity 
-    - Random value with the range from -25 to +50 degree celsius
-    - Number of packets : forever loop
+    - String of characters : "hello world!'
+    - Number of packets : 5
     - Number of nodes : 5  
 
 LoRaWAN Device EUI, Join EUI and Application Key should be entered into the app_lorawan.h file prior to compiling.
