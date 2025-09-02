@@ -19,7 +19,7 @@ static void dl_callback(uint8_t port, bool data_pending,
 			int16_t rssi, int8_t snr,
 			uint8_t len, const uint8_t *hex_data)
 {
-	printk("Port %d, Pending %d, RSSI %ddB, SNR %ddBm", port, data_pending, rssi, snr);
+	printk("Port %d, Pending %d, RSSI %ddB, SNR %ddBm\n", port, data_pending, rssi, snr);
 	// if (hex_data) {
 	// 	printk(hex_data, len, "Payload: ");
 	// }
